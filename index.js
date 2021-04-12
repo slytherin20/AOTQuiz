@@ -78,76 +78,104 @@ function askQuestion(options,question,answer){
 }
 
 function levelOne(){
-  console.log(chalk.bold.red("-------Level-1-----------"))
+  let allQuestions=[
+    {
+      options:["Stohess","Shiganshina","Trost","Karanes"],
+      question: "Where did Eren used to live with his family?",
+      answer:1
+    },
+    {
+      options:["Eren","Mikasa","Armin","Sasha"],
+      question: "Who is more intelligent?",
+      answer: 2
+    },
+    {
+      options:["Maria","Shina","Rose","Eliazbeth"],
+      question:  "What is the name of outermost wall?",
+      answer: 0
+    },
+    {
+      options: ["Arlet","Yeager","Ackerman","Reiss"],
+      question: "What is the surname of Mikasa?",
+      answer: 2
+    },
+    {
+      options:  [1,2,3,4],
+      question: "How many walls are there protecting humankind from titans?",
+      answer: 2
+    }
+  ]
+  console.log(chalk.bold.red("--------------Level-1------------------"))
   console.log(chalk.bold.white("Answer all 5 questions to move to next level"));
 
-  //Question-1
-  let cities = ["Stohess","Shiganshina","Trost","Karanes"];
-  askQuestion(cities,"Where did Eren used to live with his family?",1);
-
-  //Question-2
-  let friends = ["Eren","Mikasa","Armin","Sasha"]
-  askQuestion(friends,"Who is more intelligent?",2);
-
-  //Question-3
-  let wallName = ["Maria","Shina","Rose","Eliazbeth"]
-  askQuestion(wallName,"What is the name of outermost wall?",0);
-
-  //Question-4
-  let surname = ["Arlet","Yeager","Ackerman","Reiss"]
-  askQuestion(surname,"What is the surname of Mikasa?",2);
-
-  //Question-5
-  let numberOfWalls = [1,2,3,4]
-  askQuestion(numberOfWalls,"How many walls are there protecting humankind from titans?",2);
-
+  allQuestions.map(({options,question,answer})=>{
+    askQuestion(options,question,answer);
+  })
   levelTwo();
 
 }
 function levelTwo(){
+  let allQuestions=[
+    {
+      options:["Erwin","Grisha","Levi","Pixis"],
+      question:"Who is Eren Yeager's father?",
+      answer:1
+    },
+    {
+      options: ["Ackerman","Yeager","Arlet","Reiss"],
+      question:"Who are the true Royal family?",
+      answer:3
+    },
+  {
+      options:["Ymir","Amy","Historia","Misa"],
+      question:"What is Krista Lenz's true name?",
+      answer:2
+    },
+  {
+      options:["Annie","Hange","Sasha","Krista"],
+      question:"Who is a titan shifter?",
+      answer: 0
+    },
+  {
+      options:["Levi","Hange","Eren","Erwin"],
+      question:"Who is the commander of survey cops?",
+      answer:3
+    },
+  {
+      options:["Erwin Smith","Mikasa Ackerman","Krista Lenz","Grisha Yeager"],
+      question:"Who is from outside the walls?",
+      answer:3
+    },
+  {
+      options: ["Annie","Ymir","Reiner","Bertholdt"],
+      question: "Who wanted to kill Marco?",
+      answer:2
+    },
+  {
+      options: ["Yeager","Ackerman","Lenz","Reiss"],
+      question:"Who were the warriors who used to protect Eldia's king?",
+      answer:1
+    },
+  {
+      options:["Zeke","Grisha","Ymir","Annie"],
+      question:"Who said this-----'They also possess a bloodline once thought to exist only in legends told by the royal family. The Ackerman clan, byproducts of Titan science. To be frank, I never want to meet them again.'",
+      answer:0
+    },
+  {
+      options:["Mikasa","Jean","Sasha","Reiner"],
+      question:"Who wanted to kidnap Eren Yeager?",
+      answer:3
+    }
+  
+  ]
   console.log()
-  console.log(chalk.bold.red("-------Level-2-----------"))
-  console.log(chalk.bold.white("Answer all 10 questions to move to next level"));
+  console.log()
+  console.log(chalk.bold.red("----------------Level-2--------------------"))
+  console.log(chalk.bold.white("Answer all 10 questions to move to next level"))
 
-  //Question-1
-  let names = ["Erwin","Grisha","Levi","Pixis"]
-  askQuestion(names,"Who is Eren Yeager's father?",1)
-
-  //Question-2
-  let royalFamily = ["Ackerman","Yeager","Arlet","Reiss"]
-  askQuestion(royalFamily,"Who are the true Royal family?",3)
-
-  //Question-3 
-  let trueName = ["Ymir","Amy","Historia","Misa"]
-  askQuestion(trueName,"What is Krista Lenz's true name?",2)
-
-  //Question-4
-  let spy = ["Annie","Hange","Sasha","Krista"]
-  askQuestion(spy,"Who is a titan shifter?",0)
-
-  //Question-5
-  let commander = ["Levi","Hange","Eren","Erwin"]
-  askQuestion(commander,"Who is the commander of survey cops?",3)
-
-  //Question-6
-  let outsider = ["Erwin Smith","Mikasa Ackerman","Krista Lenz","Grisha Yeager"]
-  askQuestion(outsider,"Who is from outside the walls?",3)
-
-  //Question-7
-  let culprit = ["Annie","Ymir","Reiner","Bertholdt"]
-  askQuestion(culprit,"Who wanted to kill Marco?",2)
-
-  //Question-8
-  let warriors = ["Yeager","Ackerman","Lenz","Reiss"]
-  askQuestion(warriors,"Who were the warriors who used to protect Eldia's king?",1)
-
-  //Question-9
-  let whosays = ["Zeke","Grisha","Ymir","Annie"]
-  askQuestion(whosays,"They also possess a bloodline once thought to exist only in legends told by the royal family. The Ackerman clan, byproducts of Titan science. To be frank, I never want to meet them again.",0)
-
-  //Question-10
-  let whoAmong = ["Mikasa","Jean","Sasha","Reiner"]
-  askQuestion(whoAmong,"Who wanted to kidnap Eren Yeager among them?",3)
+  allQuestions.map(({options,question,answer})=>{
+    askQuestion(options,question,answer);
+  })
 
   console.log(chalk.bold.green("------CONGRATULATIONS YOU ANSWERED ALL QUESTIONS CORRECTLY!!------"))
 
