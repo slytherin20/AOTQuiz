@@ -138,7 +138,7 @@ function levelTwo(){
     },
   {
       options:["Levi","Hange","Eren","Erwin"],
-      question:"Who is the commander of survey cops?",
+      question:"Who is the commander of survey cops in season 2?",
       answer:3
     },
   {
